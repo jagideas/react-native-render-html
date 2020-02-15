@@ -190,14 +190,14 @@ function cssToRNStyle (css, styleset, { emSize, ptSize, ignoredStyles, allowedSt
                 if (value.search('%') !== -1 && PERC_SUPPORTED_STYLES.indexOf(key) !== -1) {
                     return [key, value];
                 }
-                if (value.search('em') !== -1) {
-                    const pxSize = parseFloat(value.replace('em', '')) * emSize;
-                    return [key, pxSize];
-                }
-                if (value.search('pt') !== -1) {
-                    const pxSize = parseFloat(value.replace('pt', '')) * ptSize;
-                    return [key, pxSize];
-                }
+                // if (value.search('em') !== -1) {
+                //     const pxSize = parseFloat(value.replace('em', '')) * emSize;
+                //     return [key, pxSize];
+                // }
+                // if (value.search('pt') !== -1) {
+                //     const pxSize = parseFloat(value.replace('pt', '')) * ptSize;
+                //     return [key, pxSize];
+                // }
                 // See if we can convert a 20px to a 20 automagically
                 const numericValue = parseFloat(value.replace('px', ''));
                 if (key !== 'fontWeight' && !isNaN(numericValue)) {
